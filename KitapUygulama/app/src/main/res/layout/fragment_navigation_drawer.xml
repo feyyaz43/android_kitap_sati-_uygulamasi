@@ -1,0 +1,89 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.video_deneme.NavigationDrawerFragment"
+    android:background="#263238">
+
+    <RelativeLayout
+        android:id="@+id/containerDrawerImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#263238">
+
+
+        <!--
+        <ImageView
+            android:id="@+id/navigationResim"
+            android:layout_width="128dp"
+            android:layout_height="185dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/placeholder"/>
+
+        -->
+
+        <Button
+            android:id="@+id/navigationButonGirisYap"
+            android:text="Giriş Yap"
+            android:layout_marginTop="10dp"
+            style="@style/ButonStyle"/>
+
+        <Button
+            android:id="@+id/navigationButonCikisYap"
+            android:text="Çıkış Yap"
+            android:layout_below="@+id/navigationButonGirisYap"
+            style="@style/ButonStyle"/>
+
+        <Button
+            android:id="@+id/navigationButonUyeOl"
+            android:text="Üye Ol"
+            android:layout_below="@+id/navigationButonCikisYap"
+            style="@style/ButonStyle"/>
+
+        <Button
+            android:id="@+id/navigationButonKitapEkle"
+            android:text="Kitap Ekle"
+            android:layout_below="@+id/navigationButonUyeOl"
+            style="@style/ButonStyle"/>
+
+        <Button
+            android:id="@+id/navigationButonKitapSil"
+            android:text="Kitap Sil"
+            android:layout_below="@+id/navigationButonKitapEkle"
+            style="@style/ButonStyle"/>
+
+        <!--
+        <Button
+            android:id="@+id/navigationButon3"
+            android:text="Şifremi Unuttum / Kitap Sil"
+            android:layout_below="@+id/navigationButon2"
+            style="@style/ButonStyle"/>
+-->
+        <Button
+            android:id="@+id/navigationHakkinda"
+            android:text="Hakkında"
+            android:layout_below="@+id/navigationButonKitapSil"
+            style="@style/ButonStyle"/>
+
+        <Button
+            android:id="@+id/navigationUygulamayiKapat"
+            android:text="Uygulamayı Kapat"
+            android:layout_below="@+id/navigationHakkinda"
+            style="@style/ButonStyle"/>
+
+    </RelativeLayout>
+
+    <!--
+    <android.support.v7.widget.RecyclerView
+        android:layout_below="@+id/containerDrawerImage"
+        android:id="@+id/drawerList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </android.support.v7.widget.RecyclerView>
+    -->
+
+
+</RelativeLayout>

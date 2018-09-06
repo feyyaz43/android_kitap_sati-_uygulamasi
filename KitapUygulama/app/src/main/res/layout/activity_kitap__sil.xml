@@ -1,0 +1,18 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.kitapuygulama.Kitap_Sil"
+    android:background="#E0E0E0">
+
+    <include android:id="@+id/app_bar" layout="@layout/app_bar"/>
+
+    <view
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/app_bar"
+        class="android.support.v7.widget.RecyclerView"
+        android:id="@+id/recycler_view_kitap_sil"
+        android:scrollbars="vertical"/>
+
+</RelativeLayout>

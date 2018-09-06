@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E0E0E0">
+
+    <include android:id="@+id/app_bar" layout="@layout/app_bar"/>
+
+
+
+    <android.support.v4.widget.DrawerLayout
+
+        android:id="@+id/drawer_layout"
+        android:layout_below="@+id/app_bar"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <FrameLayout
+            android:id="@+id/framelayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <view
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_below="@+id/app_bar"
+                class="android.support.v7.widget.RecyclerView"
+                android:id="@+id/recycler_view"
+                android:layout_alignParentStart="true"
+                android:scrollbars="vertical"/>
+
+            <Button
+                android:id="@+id/kitaplisteAra"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="Arama Yap"
+                android:layout_gravity="bottom"
+                android:textColor="@color/black"/>
+
+        </FrameLayout>
+
+
+        <fragment
+            android:id="@+id/fragment_navigation_drawer"
+            android:layout_width="@dimen/nav_drawer_width"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            app:layout="@layout/fragment_navigation_drawer"
+            android:name="com.example.kitapuygulama.NavigationDrawerFragment"
+            tools:layout="@layout/fragment_navigation_drawer" />
+
+    </android.support.v4.widget.DrawerLayout>
+
+
+
+</RelativeLayout>

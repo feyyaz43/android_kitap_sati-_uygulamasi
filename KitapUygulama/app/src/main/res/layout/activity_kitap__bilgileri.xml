@@ -1,0 +1,311 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.kitapuygulama.Kitap_Bilgileri"
+    android:background="#E0E0E0"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <include android:id="@+id/app_bar" layout="@layout/app_bar"/>
+
+    <TextView
+        android:id="@+id/kitapbilgileriKitapAdi"
+        android:layout_below="@+id/app_bar"
+        android:background="#EEEEEE"
+        style="@style/TextviewStyle"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black"
+        android:layout_below="@+id/kitapbilgileriKitapAdi"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/kitapbilgileriKitapAdi"
+        android:layout_margin="10dp"
+        android:focusableInTouchMode="false"
+        android:id="@+id/kitapbilgileriScrollView1">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/kitapbilgileriImage"
+                android:layout_width="128dp"
+                android:layout_height="185dp"
+                android:scaleType="fitXY"
+                android:adjustViewBounds="true"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/placeholder"/>
+
+            <Button
+                android:id="@+id/kitapbilgileriİlanSahibi"
+                android:maxLength="41"
+                style="@style/ButonStyle"
+                android:layout_marginRight="4dp"
+                android:layout_marginLeft="4dp"
+                android:layout_below="@+id/kitapbilgileriImage"/>
+
+            <LinearLayout
+                android:id="@+id/kitapbilgileriButonlar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/kitapbilgileriİlanSahibi">
+
+                <Button
+                    android:id="@+id/kitapbilgileriAra"
+                    android:text="Ara"
+                    style="@style/ButonStyle"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_width="wrap_content"/>
+
+                <Button
+                    android:id="@+id/kitapbilgileriAciklama"
+                    android:text="Açıklama"
+                    style="@style/ButonStyle"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    android:layout_width="fill_parent"/>
+            </LinearLayout>
+
+
+
+<!-- ilan fiyat -->
+            <TextView
+                android:id="@+id/kitapbilgileriFiyat"
+                android:layout_width="match_parent"
+                android:text="Fiyat"
+                android:textColor="#757575"
+                android:layout_below="@+id/kitapbilgileriButonlar"
+                style="@style/TextviewStyle2"/>
+            <TextView
+                android:id="@+id/kitapbilgileriFiyatBilgi"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="80sp"
+                android:textColor="@color/black"
+                android:layout_below="@+id/kitapbilgileriButonlar"
+                android:layout_alignRight="@+id/kitapbilgileriFiyat"
+                style="@style/TextviewStyle2"/>
+            <View
+                android:id="@+id/kitapbilgileriCizgi1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#616161"
+                android:layout_below="@+id/kitapbilgileriFiyatBilgi"/>
+<!-- ilan tarihi -->
+            <TextView
+                android:id="@+id/kitapbilgileriIlanTarihi"
+                android:layout_width="match_parent"
+                android:text="İlan Tarihi"
+                android:textColor="#757575"
+                android:layout_below="@+id/kitapbilgileriCizgi1"
+                style="@style/TextviewStyle2"/>
+            <TextView
+                android:id="@+id/kitapbilgileriIlanTarihiBilgi"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="80sp"
+                android:textColor="@color/black"
+                android:layout_below="@+id/kitapbilgileriCizgi1"
+                android:layout_alignRight="@+id/kitapbilgileriIlanTarihi"
+                style="@style/TextviewStyle2"/>
+            <View
+                android:id="@+id/kitapbilgileriCizgi2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#616161"
+                android:layout_below="@+id/kitapbilgileriIlanTarihiBilgi"/>
+<!-- Konumu -->
+            <TextView
+                android:id="@+id/kitapbilgileriKonum"
+                android:layout_width="match_parent"
+                android:text="Konumu"
+                android:textColor="#757575"
+                android:layout_below="@+id/kitapbilgileriCizgi2"
+                style="@style/TextviewStyle2"/>
+            <TextView
+                android:id="@+id/kitapbilgileriKonumBilgi"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="80sp"
+                android:textColor="@color/black"
+                android:layout_below="@+id/kitapbilgileriCizgi2"
+                android:layout_alignRight="@+id/kitapbilgileriKonum"
+                style="@style/TextviewStyle2"/>
+            <View
+                android:id="@+id/kitapbilgileriCizgi3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#616161"
+                android:layout_below="@+id/kitapbilgileriKonumBilgi"/>
+
+<!-- Kategori -->
+            <TextView
+                android:id="@+id/kitapbilgileriKategori"
+                android:layout_width="match_parent"
+                android:text="Kategori"
+                android:textColor="#757575"
+                android:layout_below="@+id/kitapbilgileriCizgi3"
+                style="@style/TextviewStyle2"/>
+            <TextView
+                android:id="@+id/kitapbilgileriKategoriBilgi"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="80sp"
+                android:textColor="@color/black"
+                android:layout_below="@+id/kitapbilgileriCizgi3"
+                android:layout_alignRight="@+id/kitapbilgileriKategori"
+                style="@style/TextviewStyle2"/>
+            <View
+                android:id="@+id/kitapbilgileriCizgi4"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#616161"
+                android:layout_below="@+id/kitapbilgileriKategoriBilgi"/>
+
+<!-- yazar -->
+            <TextView
+                android:id="@+id/kitapbilgileriYazar"
+                android:layout_width="match_parent"
+                android:text="Yazar"
+                android:textColor="#757575"
+                android:layout_below="@+id/kitapbilgileriCizgi4"
+                style="@style/TextviewStyle2"/>
+            <TextView
+                android:id="@+id/kitapbilgileriYazarBilgi"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="80sp"
+                android:textColor="@color/black"
+                android:layout_below="@+id/kitapbilgileriCizgi4"
+                android:layout_alignRight="@+id/kitapbilgileriYazar"
+                style="@style/TextviewStyle2"/> <!--android:maxWidth="200dp"-->
+            <View
+                android:id="@+id/kitapbilgileriCizgi5"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#616161"
+                android:layout_below="@+id/kitapbilgileriYazarBilgi"/>
+<!-- sayfa -->
+            <TextView
+                android:id="@+id/kitapbilgileriSayfa"
+                android:layout_width="match_parent"
+                android:text="Sayfa"
+                android:textColor="#757575"
+                android:layout_below="@+id/kitapbilgileriCizgi5"
+                style="@style/TextviewStyle2"/>
+            <TextView
+                android:id="@+id/kitapbilgileriSayfaBilgi"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="80sp"
+                android:textColor="@color/black"
+                android:layout_below="@+id/kitapbilgileriCizgi5"
+                android:layout_alignRight="@+id/kitapbilgileriSayfa"
+                style="@style/TextviewStyle2"/>
+            <View
+                android:id="@+id/kitapbilgileriCizgi6"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#616161"
+                android:layout_below="@+id/kitapbilgileriSayfaBilgi"/>
+<!-- dil -->
+            <TextView
+                android:id="@+id/kitapbilgileriDil"
+                android:layout_width="match_parent"
+                android:text="Dil"
+                android:textColor="#757575"
+                android:layout_below="@+id/kitapbilgileriCizgi6"
+                style="@style/TextviewStyle2"/>
+            <TextView
+                android:id="@+id/kitapbilgileriDilBilgi"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="80sp"
+                android:textColor="@color/black"
+                android:layout_below="@+id/kitapbilgileriCizgi6"
+                android:layout_alignRight="@+id/kitapbilgileriDil"
+                style="@style/TextviewStyle2"/>
+            <View
+                android:id="@+id/kitapbilgileriCizgi7"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#616161"
+                android:layout_below="@+id/kitapbilgileriDilBilgi"/>
+<!-- yayıncı -->
+            <TextView
+                android:id="@+id/kitapbilgileriYayinci"
+                android:layout_width="match_parent"
+                android:text="Yayıncı"
+                android:textColor="#757575"
+                android:layout_below="@+id/kitapbilgileriCizgi7"
+                style="@style/TextviewStyle2"/>
+            <TextView
+                android:id="@+id/kitapbilgileriYayinciBilgi"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="80sp"
+                android:textColor="@color/black"
+                android:layout_below="@+id/kitapbilgileriCizgi7"
+                android:layout_alignRight="@+id/kitapbilgileriYayinci"
+                style="@style/TextviewStyle2"/>
+            <View
+                android:id="@+id/kitapbilgileriCizgi8"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#616161"
+                android:layout_below="@+id/kitapbilgileriYayinciBilgi"/>
+
+<!-- yayınlanma tarihi -->
+            <TextView
+                android:id="@+id/kitapbilgileriYayinlanmaTarihi"
+                android:layout_width="match_parent"
+                android:text="Yayınlanma Tarihi"
+                android:textColor="#757575"
+                android:layout_below="@+id/kitapbilgileriCizgi8"
+                style="@style/TextviewStyle2"/>
+            <TextView
+                android:id="@+id/kitapbilgileriYayinlanmaTarihiBilgi"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="80sp"
+                android:textColor="@color/black"
+                android:layout_below="@+id/kitapbilgileriCizgi8"
+                android:layout_alignRight="@+id/kitapbilgileriYayinlanmaTarihi"
+                style="@style/TextviewStyle2"/>
+            <View
+                android:id="@+id/kitapbilgileriCizgi9"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#616161"
+                android:layout_below="@+id/kitapbilgileriYayinlanmaTarihiBilgi"/>
+
+<!-- isbn -->
+            <TextView
+                android:id="@+id/kitapbilgileriIsbn"
+                android:layout_width="match_parent"
+                android:text="Isbn"
+                android:textColor="#757575"
+                android:layout_below="@+id/kitapbilgileriCizgi9"
+                style="@style/TextviewStyle2"/>
+            <TextView
+                android:id="@+id/kitapbilgileriIsbnBilgi"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="80sp"
+                android:textColor="@color/black"
+                android:layout_below="@+id/kitapbilgileriCizgi9"
+                android:layout_alignRight="@+id/kitapbilgileriIsbn"
+                style="@style/TextviewStyle2"/>
+            <View
+                android:id="@+id/kitapbilgileriCizgi10"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#616161"
+                android:layout_below="@+id/kitapbilgileriIsbnBilgi"/>
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

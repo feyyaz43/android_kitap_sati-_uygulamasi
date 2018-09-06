@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Kitap Uygulama</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="next">Next</string>
+    <string name="title_activity_sub">SubActivity</string>
+
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+    <string name="title_activity_uye__giris">Üye Girişi</string>
+    <string name="title_activity_uye__ol">Üye Ol</string>
+    <string name="title_activity_uye__unuttum">Şifremi Unuttum</string>
+    <string name="title_activity_kitap__ekle">Kitap Ekle</string>
+
+
+    <string name="kategori_baslik">Kategori Seçiniz</string>
+    <string name="title_activity_kitap__bilgileri">Kitap Bilgileri</string>
+    <string name="title_activity_uye__profil">Üye Profili</string>
+    <string name="title_activity_kitap__liste">Kitap Liste</string>
+    <string name="title_activity_kitap__sil">Kitap Sil</string>
+    <string name="title_activity_arama__yap">Arama Yap</string>
+
+
+
+</resources>

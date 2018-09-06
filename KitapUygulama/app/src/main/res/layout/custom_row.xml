@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:background="@drawable/custom_bg"
+    android:clickable="true">
+
+    <!--
+
+    <ImageView
+        android:layout_gravity="center_vertical"
+        android:id="@+id/listIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_centerVertical="true"
+        android:src="@drawable/abc_ic_menu_cut_mtrl_alpha"/>
+
+    <TextView
+        android:id="@+id/listText"
+        android:text="Dummy Text"
+        android:layout_marginLeft="72dp"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        />
+-->
+
+    <Button
+        android:id="@+id/listButon"
+        style="@style/ButonStyle"/>
+
+</RelativeLayout>

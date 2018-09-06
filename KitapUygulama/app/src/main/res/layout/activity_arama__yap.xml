@@ -1,0 +1,87 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.kitapuygulama.Arama_Yap"
+    android:background="#E0E0E0">
+
+    <include android:id="@+id/app_bar" layout="@layout/app_bar"/>
+
+    <RelativeLayout
+        android:id="@+id/aramayap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_below="@+id/app_bar"
+        android:background="@android:color/white"
+        android:padding="10dp">
+
+        <EditText
+            android:id="@+id/aramayapIsbn"
+            android:hint="Isbn No"
+            android:inputType="phone"
+            android:maxLength="13"
+            style="@style/EdittextStyle">
+        </EditText>
+
+        <ImageButton android:id="@+id/aramayapBarcodeOku"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@android:drawable/screen_background_light_transparent"
+            android:src="@drawable/barcode_icon_1"
+            android:layout_alignRight="@id/aramayapIsbn"
+            android:layout_marginTop="3dp"
+            android:layout_marginRight="2dp"/>
+
+        <EditText
+            android:id="@+id/aramayapKelime"
+            android:hint="Aranacak Kelimeyi Giriniz"
+            android:maxLength="20"
+            style="@style/EdittextStyle"
+            android:layout_below="@+id/aramayapIsbn"/>
+
+        <Spinner
+            android:id="@+id/aramayapSpinnerIl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#607D8B"
+            android:padding="5dp"
+            android:layout_margin="5dp"
+            android:layout_below="@+id/aramayapKelime"/>
+
+        <Spinner
+            android:id="@+id/aramayapSpinnerIlce"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#607D8B"
+            android:padding="5dp"
+            android:layout_margin="5dp"
+            android:layout_below="@+id/aramayapSpinnerIl"/>
+
+        <Spinner
+            android:id="@+id/aramayapSpinnerKategori"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#607D8B"
+            android:padding="5dp"
+            android:layout_margin="5dp"
+            android:layout_below="@+id/aramayapSpinnerIlce"/>
+
+        <Spinner
+            android:id="@+id/aramayapSpinnerSiralama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#607D8B"
+            android:padding="5dp"
+            android:layout_margin="5dp"
+            android:layout_below="@+id/aramayapSpinnerKategori"/>
+
+        <Button
+            android:id="@+id/aramayapButon"
+            android:text="Arama Yap"
+            style="@style/ButonStyle"
+            android:layout_below="@+id/aramayapSpinnerSiralama"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

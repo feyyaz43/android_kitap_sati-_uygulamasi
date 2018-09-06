@@ -1,0 +1,204 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.kitapuygulama.Kitap_Ekle"
+    android:background="#E0E0E0"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <include android:id="@+id/app_bar" layout="@layout/app_bar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/app_bar"
+        android:layout_margin="10dp"
+        android:focusableInTouchMode="false"
+        android:id="@+id/kitapekleScrollView1">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:padding="10dp">
+
+        <Button
+            android:id="@+id/kitapekleBarcode"
+            android:text="Barcode Tarama ile Bilgileri Bul"
+            style="@style/ButonStyle"/>
+
+        <ImageView
+            android:id="@+id/kitapekleImage"
+            android:layout_width="128dp"
+            android:layout_height="185dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/placeholder"
+            android:layout_below="@+id/kitapekleBarcode"/>
+
+<!--        <SurfaceView
+            android:id="@+id/surfaceView"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+
+            android:layout_weight="1"
+            android:layout_below="@+id/kitapekleBarcode"/>
+        <Button
+            android:id="@+id/start"
+            android:text="start"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/kitapekleBarcode"
+            android:layout_marginLeft="500dp"
+            />
+        <Button
+            android:id="@+id/stop"
+            android:text="stop"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/start"
+            android:layout_marginLeft="500dp"
+            />
+-->
+
+        <Spinner
+            android:id="@+id/kitapekleSpinner1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#607D8B"
+            android:padding="5dp"
+            android:layout_margin="5dp"
+            android:layout_below="@+id/kitapekleImage"/>
+
+        <EditText
+            android:id="@+id/kitapekleIsbn"
+            android:hint="Isbn No"
+            android:layout_below="@+id/kitapekleSpinner1"
+            android:inputType="phone"
+            android:maxLength="13"
+            style="@style/EdittextStyle">
+        </EditText>
+
+        <ImageButton android:id="@+id/kitapekleBarcodeOku"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@android:drawable/screen_background_light_transparent"
+            android:src="@drawable/barcode_icon_1"
+            android:layout_alignRight="@id/kitapekleIsbn"
+            android:layout_below="@+id/kitapekleSpinner1"
+            android:layout_marginTop="3dp"
+            android:layout_marginRight="2dp"/>
+
+        <EditText
+            android:id="@+id/kitapekleKitapAdi"
+            android:hint="Kitap Adı"
+            android:layout_below="@+id/kitapekleIsbn"
+            android:maxLength="40"
+            style="@style/EdittextStyle">
+        </EditText>
+
+        <EditText
+            android:id="@+id/kitapekleAciklama"
+            android:hint="Açıklama"
+            android:maxLength="80"
+            android:layout_below="@+id/kitapekleKitapAdi"
+            style="@style/EdittextStyle">
+        </EditText>
+
+        <EditText
+            android:id="@+id/kitapekleYazar"
+            android:hint="Yazar Adı"
+            android:layout_below="@+id/kitapekleAciklama"
+            android:maxLength="40"
+            style="@style/EdittextStyle">
+        </EditText>
+
+        <EditText
+            android:id="@+id/kitapekleSayfa"
+            android:hint="Sayfa Sayısı"
+            android:inputType="phone"
+            android:layout_below="@+id/kitapekleYazar"
+            android:maxLength="5"
+            style="@style/EdittextStyle">
+        </EditText>
+
+        <EditText
+            android:id="@+id/kitapekleYayinci"
+            android:hint="Yayınevi"
+            android:layout_below="@+id/kitapekleSayfa"
+            android:maxLength="40"
+            style="@style/EdittextStyle">
+        </EditText>
+
+        <EditText
+            android:id="@+id/kitapekleYayinlanmaTarih"
+            android:hint="Yayınlanma Tarihi(Yıl)"
+            android:layout_below="@+id/kitapekleYayinci"
+            android:inputType="phone"
+            android:maxLength="4"
+            style="@style/EdittextStyle">
+        </EditText>
+
+        <EditText
+            android:id="@+id/kitapekleDil"
+            android:hint="Dil"
+            android:layout_below="@+id/kitapekleYayinlanmaTarih"
+            android:maxLength="15"
+            style="@style/EdittextStyle">
+        </EditText>
+
+        <EditText
+            android:id="@+id/kitapekleTelefon"
+            android:hint="Telefon(0 olmadan)"
+            android:layout_below="@+id/kitapekleDil"
+            android:inputType="phone"
+            android:maxLength="10"
+            style="@style/EdittextStyle">
+        </EditText>
+
+        <Spinner
+            android:id="@+id/kitapekleSpinner2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#607D8B"
+            android:padding="5dp"
+            android:layout_margin="5dp"
+            android:layout_below="@+id/kitapekleTelefon"/>
+
+        <Spinner
+            android:id="@+id/kitapekleSpinner3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#607D8B"
+            android:padding="5dp"
+            android:layout_margin="5dp"
+            android:layout_below="@+id/kitapekleSpinner2"/>
+
+        <EditText
+            android:id="@+id/kitapekleFiyat"
+            android:hint="Fiyat(TL)"
+            android:layout_below="@+id/kitapekleSpinner3"
+            android:inputType="phone"
+            android:maxLength="5"
+            style="@style/EdittextStyle">
+        </EditText>
+
+        <Button
+            android:id="@+id/kitapekleSatisListesineEkle"
+            android:text="SATIŞ LİSTESİNE EKLE"
+            style="@style/ButonStyle"
+            android:layout_below="@+id/kitapekleFiyat"/>
+
+
+
+    </RelativeLayout>
+
+    </ScrollView>
+
+
+
+</RelativeLayout>

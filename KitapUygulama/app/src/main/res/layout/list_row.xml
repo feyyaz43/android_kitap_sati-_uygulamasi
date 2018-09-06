@@ -1,0 +1,50 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:layout_marginBottom="0.1dp"
+    android:id="@+id/kitap_liste"
+    android:background="@android:color/white">
+
+    <ImageView
+        android:id="@+id/kitap_resim"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:scaleType="fitCenter"
+        android:background="@drawable/placeholder"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true"/>
+
+    <TextView
+        android:id="@+id/kitap_adi"
+        android:text="kitap_adi"
+        android:textColor="@android:color/black"
+        android:layout_marginLeft="80dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="2" />
+
+    <TextView
+        android:id="@+id/kitap_adres"
+        android:text="kitap_adres"
+        android:textColor="#B3B3B3"
+        android:layout_marginLeft="80dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:maxLines="1" />
+
+    <TextView
+        android:id="@+id/kitap_fiyat"
+        android:text="kitap_fiyat"
+        android:textColor="@android:color/holo_red_dark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

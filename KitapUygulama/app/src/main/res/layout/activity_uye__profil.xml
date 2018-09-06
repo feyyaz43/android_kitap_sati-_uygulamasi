@@ -1,0 +1,69 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.kitapuygulama.Uye_Profil"
+    android:background="#E0E0E0"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <include android:id="@+id/app_bar" layout="@layout/app_bar"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_below="@+id/app_bar"
+        android:background="@android:color/white"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/uyeprofilAdSoyad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/uyeprofilUyelikTarihiBaslik"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Üyelik Tarihi"
+            android:gravity="center"
+            android:layout_below="@+id/uyeprofilAdSoyad"
+            android:textColor="#616161"
+            android:textSize="12dp"/>
+        <TextView
+            android:id="@+id/uyeprofilUyelikTarihi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_below="@+id/uyeprofilUyelikTarihiBaslik"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:layout_marginBottom="20dp"/>
+
+        <TextView
+            android:id="@+id/uyeprofilIlanSayisiBaslik"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="İlan Sayısı"
+            android:gravity="center"
+            android:layout_below="@+id/uyeprofilUyelikTarihi"
+            android:textColor="#616161"
+            android:textSize="12dp"/>
+        <TextView
+            android:id="@+id/uyeprofilIlanSayisi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_below="@+id/uyeprofilIlanSayisiBaslik"
+            android:textColor="@color/black"
+            android:textSize="15dp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
